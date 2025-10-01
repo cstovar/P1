@@ -72,6 +72,19 @@
 - **InfluxDB:** Series temporales de datos agrícolas (puerto 8086).  
 - **MinIO:** Almacenamiento distribuido de perfiles, imágenes de plantas y backups:contentReference[oaicite:1]{index=1}.  
 
+### 📂 Bases de Datos y Almacenamiento
+
+| Componente / Servicio                 | Puerto(s) | Descripción |
+|---------------------------------------|-----------|-------------|
+| **PostgreSQL – Autenticación**        | 5432      | auth_db con usuarios, roles, permisos, sesiones y tokens |
+| **PostgreSQL – Gestión de Plantas**   | 5433      | rootly con asociaciones usuario–planta–dispositivo |
+| **InfluxDB – Series Temporales**      | 8086      | Bucket `agricultural_data` con mediciones y métricas históricas |
+| **MinIO Auth**                        | 9002–9003 | Almacenamiento de fotografías de perfil |
+| **MinIO Data Lake**                   | 9000–9001 | Archivos de datos, backups, no estructurados |
+| **MinIO User Plant**                  | 9004–9005 | Imágenes de plantas y recursos de usuario |
+
+---
+
 ---
 
 ## 🛠️ Prototype – Deployment Instructions
