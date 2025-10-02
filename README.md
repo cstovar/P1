@@ -5,7 +5,7 @@
 https://github.com/swarch-2f-rootly
 
 
-## 👥 Team 2F
+##  Team 2F
 - Carlos Santiago Sandoval Casallas  
 - Cristian Santiago Tovar Bejarano  
 - Danny Marcelo Yaluzan Acosta  
@@ -17,7 +17,7 @@ https://github.com/swarch-2f-rootly
 
 ---
 
-## 💻 Software System
+## Software System
 - **Name:** Rootly  
 - **Logo:**  
 <img src="iconRootly.png" alt="Rootly Logo" width="200"/>
@@ -25,7 +25,7 @@ https://github.com/swarch-2f-rootly
 - **Description:**  
 **ROOTLY** is an agricultural monitoring system designed under a service-oriented distributed architecture that integrates field devices and cloud services.
 
-At the **physical layer**, sensors and microcontrollers capture environmental and soil data —such as humidity, temperature, and location— and transmit them to the central platform.
+At the **physical layer**, sensors and microcontrollers capture environmental and soil data —such as humidity, temperature — and transmit them to the central platform.
 
 At the persistence layer, the architecture combines relational databases (PostgreSQL) for transactional information (users, configurations, profiles) with specialized NoSQL storage (InfluxDB) for time-series sensor data.
 
@@ -37,23 +37,23 @@ This architecture ensures scalability, resilience, and efficiency, enabling each
 
 ---
 
-## 🏛️ Architectural Structures
+## Architectural Structures
 
   ![Component-and-connector-view](C&C_View.png)
 
-### 🌐 External Actor
+###  External Actor
 - **Web Browser**  
   - The primary external actor.  
-  - Executes the frontend Single Page Application (SPA).  
+|
   - Communicates with the system through **HTTP** requests.  
 
-### 🎨 Frontend
+### Frontend
 - **Frontend Service**  
   - Acts as the presentation layer.  
   - Provides dashboards, plant management, and real-time sensor data visualization.  
   - Communicates with backend services via **REST** and **GraphQL APIs**.  
 
-### ⚙️ Backend Services
+### Backend Services
 1. **be-autentication-and-roles**  
    - Provides user login, role-based access control (RBAC), and token validation.  
    - Exposes a **REST API** to the frontend.  
@@ -78,30 +78,31 @@ This architecture ensures scalability, resilience, and efficiency, enabling each
    - Saves raw files and backups in a **bucket**.  
    - Exposes controlled APIs to other services (e.g., Analytics).  
 
-### 📡 IoT Devices
+### IoT Devices
 - **microcontroller-device**  
   - Capture field data such as soil humidity and temperature.  
   - Send measurements to the Data Collection Service via **REST API calls**.  
 
-### 🗄️ Data Storage
+### Data Storage
 - **Relational Databases (SQL):** Dedicated to authentication and plant/user management.  
 - **NoSQL Database (Time-Series):** Optimized for sensor data (measurements, historical series).  
 - **Buckets (Object Storage):** Handle unstructured data such as images, backups, and files.  
 
 ---
 
-### 📌 Architectural Styles
+### Architectural Styles
+
 1. **Client–Server**  
    The browser (client) requests resources from the frontend (server) via HTTP. This ensures separation between presentation and business logic.  
 
 2. **SOFEA (Service-Oriented Front-End Architecture)**  
    The frontend is a decoupled layer that consumes only services exposed via REST/GraphQL, which facilitates scalability and backend reuse by different clients.  
 
-3. **Anti-Pattern Correction**  
+---
+
+**Anti-Pattern Correction**  
    Direct access from the analytics reporting service to the NoSQL database was removed, replacing it with a controlled interface in the data collection service. This improves security and reduces coupling.
 
-
----
 
 ### 📌 Architectural Elements & Relations
 
