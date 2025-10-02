@@ -183,7 +183,7 @@ git clone https://github.com/swarch-2f-rootly/rootly-microcontroller.git
 
 2. **Navigate to deployment directory**
    ```bash
-   cd rootly-deployment
+   cd rootly-deploy
    ```
 
 3. **Run setup script**
