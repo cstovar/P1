@@ -21,6 +21,7 @@ https://github.com/swarch-2f-rootly
 - **Name:** Rootly  
 - **Logo:**  
 <img src="iconRootly.png" alt="Rootly Logo" width="200"/>
+
 - **Description:**  
 **ROOTLY** is an agricultural monitoring system designed under a service-oriented distributed architecture that integrates field devices and cloud services.
 
