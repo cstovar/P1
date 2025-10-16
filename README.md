@@ -178,6 +178,7 @@ git clone https://github.com/swarch-2f-rootly/rootly-user-plant-management-backe
 git clone https://github.com/swarch-2f-rootly/rootly-authentication-and-roles-backend.git
 git clone https://github.com/swarch-2f-rootly/rootly-data-management-backend.git
 git clone https://github.com/swarch-2f-rootly/rootly-microcontroller.git
+https://github.com/swarch-2f-rootly/rootly-apigateway.git
 ```
 
 
